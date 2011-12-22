@@ -1,0 +1,12 @@
+//
+//  WarningsTest-Prefix.pch
+//  WarningsTest
+//
+//  Created by Peter Hosey on 2011-12-21.
+//
+
+#include <stdbool.h>
+#if __OBJC__
+#	import <Cocoa/Cocoa.h>
+#	import <SenTestingKit/SenTestingKit.h>
+#endif
