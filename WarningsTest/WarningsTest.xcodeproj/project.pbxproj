@@ -25,6 +25,7 @@
 		31043D7A14A2ED720049DF02 /* WarningsTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WarningsTestTests.h; sourceTree = "<group>"; };
 		31043D7B14A2ED720049DF02 /* WarningsTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WarningsTestTests.m; sourceTree = "<group>"; };
 		31043D8514A2ED930049DF02 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = ../Warnings.xcconfig; sourceTree = "<group>"; };
+		31043D8614A2F7B20049DF02 /* WarningsTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WarningsTest-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 			children = (
 				31043D7614A2ED720049DF02 /* WarningsTestTests-Info.plist */,
 				31043D7714A2ED720049DF02 /* InfoPlist.strings */,
+				31043D8614A2F7B20049DF02 /* WarningsTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,7 +251,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WarningsTest.app/Contents/MacOS/WarningsTest";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WarningsTest/WarningsTest-Prefix.pch";
+				GCC_PREFIX_HEADER = "WarningsTestTests/WarningsTest-Prefix.pch";
 				INFOPLIST_FILE = "WarningsTestTests/WarningsTestTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -263,7 +265,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WarningsTest.app/Contents/MacOS/WarningsTest";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WarningsTest/WarningsTest-Prefix.pch";
+				GCC_PREFIX_HEADER = "WarningsTestTests/WarningsTest-Prefix.pch";
 				INFOPLIST_FILE = "WarningsTestTests/WarningsTestTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
