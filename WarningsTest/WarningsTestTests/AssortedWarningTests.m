@@ -1,11 +1,11 @@
 //
-//  WarningsTestTests.m
+//  AssortedWarningTests.m
 //  WarningsTestTests
 //
 //  Created by Peter Hosey on 2011-12-21.
 //
 
-#import "WarningsTestTests.h"
+#import "AssortedWarningTests.h"
 
 #include <mach/mach_time.h>
 
