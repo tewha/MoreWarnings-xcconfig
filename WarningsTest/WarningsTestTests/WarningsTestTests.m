@@ -7,6 +7,8 @@
 
 #import "WarningsTestTests.h"
 
+#include <mach/mach_time.h>
+
 NSString *fred = @"Fred";
 
 static functionWithoutReturnType(void);
@@ -23,7 +25,7 @@ static void unusedFunction(void);
 	self->fred = @"Fred";
 	self->wilma = @"Wilma";
 
-	srandom(time(NULL));
+	srandom((unsigned)time(NULL));
 }
 
 - (void) testCheckSwitchStatements {
@@ -32,17 +34,17 @@ static void unusedFunction(void);
 		kBar,
 		kBaz,
 		kQux,
-	} value = random() % 4;
+	} value = ((int)random()) % 4;
 
 	switch (value) {
 		case kFoo:
-			NSLog(@"Foo")
+			NSLog(@"Foo");
 			break;
 		case kBar:
-			NSLog(@"Bar")
+			NSLog(@"Bar");
 			break;
 		case kBaz:
-			NSLog(@"Baz")
+			NSLog(@"Baz");
 			break;
 		//kQux intentionally omitted (to trigger the warning)
 	}
@@ -61,7 +63,7 @@ static void unusedFunction(void);
 
 - (void) test64To32 {
 	uint64_t absoluteTime = mach_absolute_time();
-	uint64_t nanoseconds = AbsoluteToNanoseconds(absoluteTime);
+	uint64_t nanoseconds = UnsignedWideToUInt64(AbsoluteToNanoseconds(UInt64ToUnsignedWide(absoluteTime)));
 	uint32_t fractionOfASecond = (nanoseconds % 1000000000ULL);
 	STAssertTrue(fractionOfASecond >= 0, @"Strange number of nanoseconds after the whole second in %llu", nanoseconds);
 }
@@ -87,8 +89,8 @@ static void unusedFunction(void);
 
 - (void) testMissingFieldInitializers {
 	NSRect bounds = { { 640, 480 } }; //Note: Missing origin
-	STAssertEquals(rect.size.width, (CGFloat)640.0, @"Width not equal to 640!");
-	STAssertEquals(rect.size.height, (CGFloat)480.0, @"Width not equal to 480!");
+	STAssertEquals(bounds.size.width, (CGFloat)640.0, @"Width not equal to 640!");
+	STAssertEquals(bounds.size.height, (CGFloat)480.0, @"Width not equal to 480!");
 }
 
 - (void) testSignComparison {
