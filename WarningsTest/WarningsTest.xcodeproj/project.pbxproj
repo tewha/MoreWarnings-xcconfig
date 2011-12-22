@@ -15,6 +15,7 @@
 		31043D8C14A30D400049DF02 /* InitializerWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D8B14A30D400049DF02 /* InitializerWarningTests.m */; };
 		31043D8F14A30DA20049DF02 /* UnusedTokenWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D8E14A30DA20049DF02 /* UnusedTokenWarningTests.m */; };
 		31043D9214A30DD20049DF02 /* ShadowingWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D9114A30DD20049DF02 /* ShadowingWarningTests.m */; };
+		31043D9514A325900049DF02 /* DeprecationWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D9414A325900049DF02 /* DeprecationWarningTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		31043D8E14A30DA20049DF02 /* UnusedTokenWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnusedTokenWarningTests.m; sourceTree = "<group>"; };
 		31043D9014A30DD20049DF02 /* ShadowingWarningTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowingWarningTests.h; sourceTree = "<group>"; };
 		31043D9114A30DD20049DF02 /* ShadowingWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowingWarningTests.m; sourceTree = "<group>"; };
+		31043D9314A325900049DF02 /* DeprecationWarningTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeprecationWarningTests.h; sourceTree = "<group>"; };
+		31043D9414A325900049DF02 /* DeprecationWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeprecationWarningTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				31043D8E14A30DA20049DF02 /* UnusedTokenWarningTests.m */,
 				31043D9014A30DD20049DF02 /* ShadowingWarningTests.h */,
 				31043D9114A30DD20049DF02 /* ShadowingWarningTests.m */,
+				31043D9314A325900049DF02 /* DeprecationWarningTests.h */,
+				31043D9414A325900049DF02 /* DeprecationWarningTests.m */,
 				31043D7514A2ED720049DF02 /* Supporting Files */,
 			);
 			path = WarningsTestTests;
@@ -203,6 +208,7 @@
 				31043D8C14A30D400049DF02 /* InitializerWarningTests.m in Sources */,
 				31043D8F14A30DA20049DF02 /* UnusedTokenWarningTests.m in Sources */,
 				31043D9214A30DD20049DF02 /* ShadowingWarningTests.m in Sources */,
+				31043D9514A325900049DF02 /* DeprecationWarningTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
