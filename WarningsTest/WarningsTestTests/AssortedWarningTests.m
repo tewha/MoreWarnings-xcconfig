@@ -58,6 +58,11 @@
 	STAssertTrue(temperature > freezingPoint, @"Temperature is below freezing!");
 }
 
+- (void) testComparisonOfPointerRelationallyToZero {
+	STAssertTrue(@"Foo" > 0, @"A string is not greater than zero!");
+	STAssertTrue(@"Foo" < 0, @"A string is not greater than zero!");
+}
+
 - (void) testUndeclaredSelector {
 	STAssertFalse([self respondsToSelector:@selector(onMyMark:getSet:go:)], @"Test case object responds to a made-up message!");
 }
