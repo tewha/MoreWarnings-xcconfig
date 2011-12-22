@@ -11,6 +11,10 @@
 		31043D7114A2ED720049DF02 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31043D5114A2ED710049DF02 /* Cocoa.framework */; };
 		31043D7914A2ED720049DF02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31043D7714A2ED720049DF02 /* InfoPlist.strings */; };
 		31043D7C14A2ED720049DF02 /* AssortedWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D7B14A2ED720049DF02 /* AssortedWarningTests.m */; };
+		31043D8914A30BD70049DF02 /* FunctionWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D8814A30BD70049DF02 /* FunctionWarningTests.m */; };
+		31043D8C14A30D400049DF02 /* InitializerWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D8B14A30D400049DF02 /* InitializerWarningTests.m */; };
+		31043D8F14A30DA20049DF02 /* UnusedTokenWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D8E14A30DA20049DF02 /* UnusedTokenWarningTests.m */; };
+		31043D9214A30DD20049DF02 /* ShadowingWarningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31043D9114A30DD20049DF02 /* ShadowingWarningTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +26,18 @@
 		31043D6F14A2ED710049DF02 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		31043D7614A2ED720049DF02 /* WarningsTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WarningsTestTests-Info.plist"; sourceTree = "<group>"; };
 		31043D7814A2ED720049DF02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		31043D7A14A2ED720049DF02 /* AssortedWarningTests.h */ = {isa = PBXFileReference; path = AssortedWarningTests.h; sourceTree = "<group>"; };
+		31043D7A14A2ED720049DF02 /* AssortedWarningTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssortedWarningTests.h; sourceTree = "<group>"; };
 		31043D7B14A2ED720049DF02 /* AssortedWarningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssortedWarningTests.m; sourceTree = "<group>"; };
 		31043D8514A2ED930049DF02 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = ../Warnings.xcconfig; sourceTree = "<group>"; };
 		31043D8614A2F7B20049DF02 /* WarningsTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WarningsTest-Prefix.pch"; sourceTree = "<group>"; };
+		31043D8714A30BD70049DF02 /* FunctionWarningTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionWarningTests.h; sourceTree = "<group>"; };
+		31043D8814A30BD70049DF02 /* FunctionWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionWarningTests.m; sourceTree = "<group>"; };
+		31043D8A14A30D400049DF02 /* InitializerWarningTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializerWarningTests.h; sourceTree = "<group>"; };
+		31043D8B14A30D400049DF02 /* InitializerWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializerWarningTests.m; sourceTree = "<group>"; };
+		31043D8D14A30DA20049DF02 /* UnusedTokenWarningTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnusedTokenWarningTests.h; sourceTree = "<group>"; };
+		31043D8E14A30DA20049DF02 /* UnusedTokenWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnusedTokenWarningTests.m; sourceTree = "<group>"; };
+		31043D9014A30DD20049DF02 /* ShadowingWarningTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowingWarningTests.h; sourceTree = "<group>"; };
+		31043D9114A30DD20049DF02 /* ShadowingWarningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowingWarningTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,14 @@
 			children = (
 				31043D7A14A2ED720049DF02 /* AssortedWarningTests.h */,
 				31043D7B14A2ED720049DF02 /* AssortedWarningTests.m */,
+				31043D8714A30BD70049DF02 /* FunctionWarningTests.h */,
+				31043D8814A30BD70049DF02 /* FunctionWarningTests.m */,
+				31043D8A14A30D400049DF02 /* InitializerWarningTests.h */,
+				31043D8B14A30D400049DF02 /* InitializerWarningTests.m */,
+				31043D8D14A30DA20049DF02 /* UnusedTokenWarningTests.h */,
+				31043D8E14A30DA20049DF02 /* UnusedTokenWarningTests.m */,
+				31043D9014A30DD20049DF02 /* ShadowingWarningTests.h */,
+				31043D9114A30DD20049DF02 /* ShadowingWarningTests.m */,
 				31043D7514A2ED720049DF02 /* Supporting Files */,
 			);
 			path = WarningsTestTests;
@@ -179,6 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				31043D7C14A2ED720049DF02 /* AssortedWarningTests.m in Sources */,
+				31043D8914A30BD70049DF02 /* FunctionWarningTests.m in Sources */,
+				31043D8C14A30D400049DF02 /* InitializerWarningTests.m in Sources */,
+				31043D8F14A30DA20049DF02 /* UnusedTokenWarningTests.m in Sources */,
+				31043D9214A30DD20049DF02 /* ShadowingWarningTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

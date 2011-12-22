@@ -9,22 +9,9 @@
 
 #include <mach/mach_time.h>
 
-NSString *fred = @"Fred";
-
-static functionWithoutReturnType(void);
-static int functionWithReturnType(void);
-
-static void unusedFunction(void);
-
 @implementation WarningsTestTests
-{
-	NSString *fred, *wilma;
-}
 
 - (void) setUp {
-	self->fred = @"Fred";
-	self->wilma = @"Wilma";
-
 	srandom((unsigned)time(NULL));
 }
 
@@ -49,34 +36,12 @@ static void unusedFunction(void);
 		//kQux intentionally omitted (to trigger the warning)
 	}
 }
-- (void) testCheckLocalShadowsInstanceVariable {
-	NSString *wilma = @"Wilma";
-	STAssertEqualObjects(wilma, @"Wilma", @"Local variable wilma was not equal to @\"Wilma\"");
-}
-- (void) testCheckLocalShadowsGlobal {
-	NSString *fred = @"Fred";
-	STAssertEqualObjects(fred, @"Fred", @"Local variable wilma was not equal to @\"Fred\"");
-}
-- (void) testCheckInstanceVariableShadowsGlobal {
-	STAssertEqualObjects(fred, @"Fred", @"Instance variable wilma was not equal to @\"Fred\"");
-}
 
 - (void) test64To32 {
 	uint64_t absoluteTime = mach_absolute_time();
 	uint64_t nanoseconds = UnsignedWideToUInt64(AbsoluteToNanoseconds(UInt64ToUnsignedWide(absoluteTime)));
 	uint32_t fractionOfASecond = (nanoseconds % 1000000000ULL);
 	STAssertTrue(fractionOfASecond >= 0, @"Strange number of nanoseconds after the whole second in %llu", nanoseconds);
-}
-
-- (void) testInitializerNotFullyBracketed {
-	NSRect rect = { 0, 0, 640, 480 };
-	STAssertEquals(rect.size.width, (CGFloat)640.0, @"Width not equal to 640!");
-	STAssertEquals(rect.size.height, (CGFloat)480.0, @"Width not equal to 480!");
-}
-
-- (void) testMismatchedReturnType {
-	STAssertNoThrow(functionWithoutReturnType(), @"functionWithoutReturnType threw an exception!");
-	STAssertEquals(functionWithReturnType(), 42, @"functionWithReturnType returned something other than 42!");
 }
 
 - (void) testMissingParentheses {
@@ -87,12 +52,6 @@ static void unusedFunction(void);
 			STAssertFalse(false, @"False is true!", true);
 }
 
-- (void) testMissingFieldInitializers {
-	NSRect bounds = { { 640, 480 } }; //Note: Missing origin
-	STAssertEquals(bounds.size.width, (CGFloat)640.0, @"Width not equal to 640!");
-	STAssertEquals(bounds.size.height, (CGFloat)480.0, @"Width not equal to 480!");
-}
-
 - (void) testSignComparison {
 	signed int temperature = -32;
 	unsigned int freezingPoint = 0U;
@@ -101,26 +60,6 @@ static void unusedFunction(void);
 
 - (void) testUndeclaredSelector {
 	STAssertFalse([self respondsToSelector:@selector(onMyMark:getSet:go:)], @"Test case object responds to a made-up message!");
-}
-
-- (void) testUnusedLabel {
-	STAssertTrue(true, @"True is not true!");
-testFalse:
-	STAssertFalse(false, @"False is not false!");
-}
-
-- (void) testUnusedValue {
-	4 + 4;
-	STAssertTrue(4 + 4, @"4 + 4 is false!");
-}
-
-- (void) testUnusedVariable {
-	NSUInteger answer = 42;
-	STAssertTrue(true, @"True is not true!");
-}
-
-- (void) testMissingPrototypes {
-	STAssertEquals(functionWithNoPrototype(), M_PI, @"functionWithNoPrototype returned something not equal to pi!");
 }
 
 - (void) testFormat {
@@ -160,19 +99,3 @@ testFalse:
 }
 
 @end
-
-static functionWithoutReturnType(void) {
-	return 42;
-}
-static int functionWithReturnType(void) {
-	return;
-}
-
-static void unusedFunction(void) {
-	enum { HORIZONTAL_ELLIPSIS = 0x2026 };
-	NSLog(@"I'm so lonely%C", HORIZONTAL_ELLIPSIS);
-}
-
-static double functionWithNoPrototype(void) {
-	return M_PI;
-}
