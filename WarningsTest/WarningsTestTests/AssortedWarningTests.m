@@ -9,7 +9,7 @@
 
 #include <mach/mach_time.h>
 
-@implementation WarningsTestTests
+@implementation AssortedWarningTests
 
 - (void) setUp {
 	srandom((unsigned)time(NULL));
